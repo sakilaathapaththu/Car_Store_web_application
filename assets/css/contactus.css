@@ -1,0 +1,149 @@
+
+
+
+/* Section Styles */
+section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 800;
+    font-family: var(--primary-font);
+    margin-bottom: 20px;
+}
+
+
+/* Contact Form Styles */
+.container .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container .content .left-side,
+.container .content .right-side {
+    width: 100%;
+    max-width: 100%;
+    margin: 10px 0;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.left-side .details {
+    flex: 1;
+    margin: 14px;
+    text-align: center;
+    max-width: 200px; /* Adjust as needed for layout */
+}
+
+.left-side .details i {
+    font-size: 30px;
+    color: #3e2093;
+    margin-bottom: 10px;
+}
+
+.left-side .details .topic {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.left-side .details .text-one,
+.left-side .details .text-two {
+    font-size: 14px;
+    color: #afafb6;
+}
+
+/* Other styles remain unchanged */
+.right-side .topic-text {
+    font-size: 23px;
+    font-weight: 600;
+    color: #3e2093;
+}
+
+.right-side .input-box {
+    width: 100%;
+    margin: 12px 0;
+}
+
+.right-side .input-box input,
+.right-side .input-box textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: #F0F1F8;
+    border-radius: 6px;
+    padding: 15px;
+    resize: none;
+    box-sizing: border-box;
+}
+
+.right-side .message-box {
+    min-height: 110px;
+}
+
+.right-side .button {
+    display: inline-block;
+    margin-top: 12px;
+}
+
+.right-side .button input[type="submit"] {
+    color: #fff;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background: #3e2093;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.right-side .button input[type="submit"]:hover {
+    background: #5029bc;
+}
+
+/* Media Queries */
+@media (max-width: 950px) {
+    .container {
+        width: 90%;
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 820px) {
+    
+
+    .container .content {
+        flex-direction: column;
+    }
+
+    .left-side .details,
+    .right-side {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .right-side .topic-text {
+        font-size: 20px;
+    }
+
+    .right-side .button input[type="submit"] {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+}

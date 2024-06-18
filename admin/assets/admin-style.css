@@ -1,0 +1,273 @@
+/* Global CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Button Style */
+.btn {
+  box-sizing: border-box;
+  padding: 8px 12px;
+  margin: 10px 0;
+  border-radius: 4px;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  font-size: 16px;
+  font-weight: 700;
+  background: #d1515a;
+  color: #0c0c0c;
+  border: 2px solid #dc5a60;
+}
+
+.btn:hover {
+  background: #df4242;
+  color: #fcfafa;
+}
+
+/* Main Layout Grid */
+.admin {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 70px auto;
+  grid-template-columns: 153px 1fr;
+  grid-template-areas:
+    "header header"
+    "nav main";
+}
+
+.admin__header {
+  display: flex;
+  align-items: center;
+  padding-right: 50px;
+  grid-area: header;
+  height: 70px;
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.admin__header a h1 {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.admin__nav {
+  grid-area: nav;
+  background-color: #313541;
+}
+
+.admin__nav .menu {
+  padding: 20px;
+}
+
+.menu__item {
+  margin-bottom: 20px;
+  list-style: none;
+}
+
+.menu__item a {
+  color: #fff;
+  font-size: 18px;
+}
+
+.admin__main {
+  grid-area: main;
+  padding: 16px;
+  background-color: #f4f7fa;
+}
+
+.toolbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.toolbar h3 {
+  margin-left: 20px;
+}
+
+/* Dashboard Overview Grid */
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.dashboard__item {
+  grid-column-end: span 2;
+  padding: 16px;
+}
+
+.dashboard__item--full {
+  grid-column: 1 / -1;
+}
+
+.dashboard__item--col {
+  grid-column-end: span 1;
+}
+
+/* Links */
+a {
+  color: #dc5a60;
+  text-decoration: none;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #dc5a60;
+}
+
+/* Cards */
+.card {
+  width: 100%;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  background: #fff;
+}
+
+.card a {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+/* Table style */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+table th, td {
+  border: 1px solid #9b9b9b;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Form */
+form {
+  width: 100%;
+  margin-top: 30px;
+}
+
+input[type=text], input[type=number], input[type=date], select, input[type="file"], textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  /* width: 100%; */
+  background-color: #1ace56;
+  color: white;
+  padding: 14px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.add-form {
+  background: #fff;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+/* Responsive CSS */
+@media (max-width: 768px) {
+  .admin {
+    grid-template-rows: 70px auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main";
+  }
+
+  .admin__nav {
+    display: none;
+  }
+
+  .admin__main {
+    padding: 16px;
+  }
+
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  table thead, table tbody, table th, table td, table tr {
+    display: block;
+  }
+
+  table tr {
+    margin-bottom: 15px;
+  }
+
+  table td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .toolbar h3 {
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  table th, table td {
+    font-size: 14px;
+  }
+
+  input[type=submit] {
+    padding: 12px;
+  }
+}
